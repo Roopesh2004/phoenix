@@ -93,6 +93,26 @@ function speakThis(message) {
         window.open('Calculator:///')
         const finalText = "Opening Calculator";
         speech.text = finalText;
+
+    } else if (message.includes('my mode')) {
+        setTimeout(function() {
+            window.open("https://leetcode.com/problemset/", "_blank");
+        }, 1000); // Delay in milliseconds
+
+        setTimeout(function() {
+            window.open("https://www.youtube.com/", "_blank");
+        }, 2000);
+
+        setTimeout(function() {
+            window.open("https://chat.openai.com/", "_blank");
+        }, 3000);
+
+        setTimeout(function() {
+            window.open("https://web.whatsapp.com/", "_blank");
+        }, 4000);
+
+        const finalText = "Opening my mode     all the best for your coding";
+        speech.text = finalText;
     } else {
         window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
         const finalText = "I found some information for " + message + " on google";
